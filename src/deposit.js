@@ -2,8 +2,8 @@
 
 (function(exports) {
 
-  function Deposit() {
-
+  function Deposit(amount) {
+    this.amount = amount;
   }
 
   exports.Deposit = Deposit;
