@@ -1,7 +1,7 @@
 "use strict";
 
-describe('Statement', function(){
-  var statement;
+describe('BankStatement', function(){
+  var bankStatement;
   // var history;
   // var today;
   // var tomorrow;
@@ -20,7 +20,7 @@ describe('Statement', function(){
     // ]
     //
     // history = new History
-    statement = new Statement();
+    bankStatement = new BankStatement();
   });
 
   //   afterEach(function () {

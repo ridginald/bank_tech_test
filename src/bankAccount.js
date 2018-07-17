@@ -2,8 +2,9 @@
 
 (function(exports) {
 
-  function BankAccount(balance){
-    this.balance = balance
+  function BankAccount(balance, statement = new bankStatement){
+    this.balance = balance;
+    this.statement = statement;
 
   }
 
