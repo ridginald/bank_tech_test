@@ -2,7 +2,7 @@
 
 (function(exports) {
 
-  function BankAccount(balance, statement = new bankStatement()){
+  function BankAccount(balance = 0, statement = new BankStatement()){
     this.balance = balance;
     this.statement = statement;
 

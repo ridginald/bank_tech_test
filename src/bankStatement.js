@@ -2,10 +2,10 @@
 
 (function(exports) {
 
-  function bankStatement(history = new TransactionHistory()) {
+  function BankStatement(history = new TransactionHistory()) {
     this.history = history;
   }
 
-  exports.bankStatement = bankStatement;
+  exports.BankStatement = BankStatement;
 
 })(this);

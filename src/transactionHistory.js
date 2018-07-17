@@ -2,10 +2,10 @@
 
 (function(exports) {
 
-  function transactionHistory(transactions = []) {
+  function TransactionHistory(transactions = []) {
     this.transactions = transactions;
   }
 
-  exports.transactionHistory = transactionHistory;
+  exports.TransactionHistory = TransactionHistory;
 
 })(this);
