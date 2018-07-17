@@ -3,7 +3,7 @@
 describe('Deposit', function() {
   var transaction;
   var credit;
-  var withdraw;
+  var debit;
   var today;
   var tomorrow;
   var amount;
@@ -14,7 +14,7 @@ describe('Deposit', function() {
     jasmine.clock().install();
     jasmine.clock().mockDate();
     credit = new Transaction(amount, today);
-    withdraw = new Transaction(500.00, tomorrow);
+    debit = new Transaction(500.00, tomorrow);
   });
 
   afterEach(function () {
@@ -34,10 +34,10 @@ describe('Deposit', function() {
   });
 
   it('should be able to withdraw correct amount(500.00)', function() {
-    expect(withdraw.amount).toBe(500.00);
+    expect(debit.amount).toBe(500.00);
   });
 
   it('should have a withdrawal date', function() {
-    expect(withdraw.date).toBe(tomorrow);
+    expect(debit.date).toBe(tomorrow);
   });
 });
