@@ -2,8 +2,8 @@
 
 (function(exports) {
 
-  function Statement() {
-
+  function Statement(history) {
+    this.history = history;
   }
 
   exports.Statement = Statement;
