@@ -2,11 +2,11 @@
 
 (function(exports) {
 
-  function Deposit(amount, date = new Date()) {
+  function Transaction(amount, date = new Date()) {
     this.amount = amount;
     this.date = date;
   }
 
-  exports.Deposit = Deposit;
+  exports.Transaction = Transaction;
 
 })(this);

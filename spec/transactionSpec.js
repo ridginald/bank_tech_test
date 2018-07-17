@@ -1,7 +1,8 @@
 'use strict';
 
 describe('Deposit', function() {
-  var deposit;
+  var transaction;
+  var credit;
   var today;
   var amount;
 
@@ -9,7 +10,7 @@ describe('Deposit', function() {
     today = new Date(2012, 1, 10);
     jasmine.clock().install();
     jasmine.clock().mockDate();
-    deposit = new Deposit(amount, today);
+    credit = new Transaction(amount, today);
   });
 
   afterEach(function () {
@@ -17,15 +18,15 @@ describe('Deposit', function() {
 });
 
   it('should be a defined object', function() {
-    expect(deposit instanceof(Deposit)).toBe(true);
+    expect(credit instanceof(Transaction)).toBe(true);
   });
 
   it('should be able to deposit any amount', function() {
-    expect(deposit.amount).toBe(amount);
+    expect(credit.amount).toBe(amount);
   });
 
   it('should have a deposit date', function() {
-    expect(deposit.date).toBe(today);
+    expect(credit.date).toBe(today);
   });
 
 });
