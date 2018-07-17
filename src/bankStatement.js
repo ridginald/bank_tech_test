@@ -2,7 +2,7 @@
 
 (function(exports) {
 
-  function bankStatement(history) {
+  function bankStatement(history = new TransactionHistory()) {
     this.history = history;
   }
 

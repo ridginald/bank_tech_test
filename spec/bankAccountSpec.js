@@ -4,7 +4,7 @@ describe('BankAccount', function() {
   var statement;
   var bankAccount;
 
-  bankAccount = new BankAccount(1000.00,bankStatement);
+  bankAccount = new BankAccount(1000.00, bankStatement);
 
   it('should display the correct balance', function(){
     expect(bankAccount.balance).toBe(1000.00)
