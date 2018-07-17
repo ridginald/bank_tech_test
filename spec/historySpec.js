@@ -1,7 +1,7 @@
 "use strict";
 
-describe('Statement', function(){
-  var statement;
+describe('History', function(){
+  var history;
   var today;
   var tomorrow;
   var transactions;
@@ -18,7 +18,7 @@ describe('Statement', function(){
         new Transaction(2000.00, tomorrow)
       ]
 
-      statement = new Statement(transactions);
+      history = new History(transactions);
     });
 
       afterEach(function () {
@@ -26,7 +26,7 @@ describe('Statement', function(){
     });
 
   it('should return a history of transactions', function(){
-    expect(statement.transactions).toBe(transactions)
+    expect(history.transactions).toBe(transactions)
   })
 
 });
