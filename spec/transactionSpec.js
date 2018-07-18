@@ -21,4 +21,5 @@ describe('Deposit', function() {
   it('should have a withdrawal date', function() {
     expect(debit.date).toBe(tomorrow);
   });
+  
 });

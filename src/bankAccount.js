@@ -8,6 +8,12 @@
 
   }
 
+  BankAccount.prototype = {
+    deposit: function(amount){
+    this.balance += amount
+    }
+  };
+
   exports.BankAccount = BankAccount;
 
 })(this);

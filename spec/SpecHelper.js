@@ -7,6 +7,8 @@ var bankAccount;
 var credit;
 var debit;
 var amount;
+var deposit;
+var balance;
 
 beforeEach(function() {
   today = new Date(2012, 1, 13);
