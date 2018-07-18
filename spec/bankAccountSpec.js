@@ -16,4 +16,11 @@ describe('BankAccount', function(){
       expect(bankAccount.balance).toEqual(1000.00);
     });
   });
+
+  describe('Withdraw', function(){
+    it('should decrease the balance', function(){
+      bankAccount.withdraw(500.00);
+      expect(bankAccount.balance).toEqual(-500.00);
+    });
+  });
 });

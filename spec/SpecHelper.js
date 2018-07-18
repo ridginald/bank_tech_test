@@ -9,6 +9,7 @@ var debit;
 var amount;
 var deposit;
 var balance;
+var withdraw;
 
 beforeEach(function() {
   today = new Date(2012, 1, 13);
