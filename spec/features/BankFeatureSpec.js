@@ -22,4 +22,9 @@ describe('Features', function() {
     account.deposit(1000.00);
     expect(account.viewStatement()).toContain("18/07/2018");
   });
+
+  it('withdrawal date is recorded', function() {
+    account.withdraw(1000.00);
+    expect(account.viewStatement()).toContain("18/07/2018");
+  });
 });
