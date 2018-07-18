@@ -23,15 +23,15 @@
     var day   = (date.getDate()).toString();
     var month = (date.getMonth() + 1).toString();
     var year  = (date.getFullYear()).toString();
-    if (day.length == 1) {
+    if (day.length === 1) {
       day = "0" + day;
     }
-    if (month.length == 1) {
+    if (month.length === 1) {
       month = "0" + month;
     }
     return day + '/' + month + '/' + year;
   }
-  
+
   exports.BankStatement = BankStatement;
 
 })(this);
