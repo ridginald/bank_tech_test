@@ -2,7 +2,9 @@
 
 (function(exports) {
 
-  function BankStatement(history = new TransactionHistory()) {
+  var headers = "date  || credit  || debit  || balance";
+
+  function BankStatement(history = new TransactionHistory()){
     this.history = history;
   }
 
@@ -11,9 +13,11 @@
       this.history.addTransaction(amount);
     },
     display: function(){
-      var display = "";
-      this.history.transactions.forEach(function(element) {
-        display += formatDate(element.date);
+      var display = headers + '/n';
+      this.history.transactions.forEach(function(e) {
+        display += formatDate(e.date);
+        display += '  || ';
+        display += e.amount.toFixed(2);
       });
       return display;
     }

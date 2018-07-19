@@ -11,6 +11,7 @@ var deposit;
 var balance;
 var withdraw;
 var viewStatement;
+var account;
 
 beforeEach(function() {
   today = new Date(2012, 1, 13);
