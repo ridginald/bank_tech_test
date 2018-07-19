@@ -24,21 +24,21 @@ describe('Features', function() {
     expect(account.balance).toEqual(-500.00);
   });
 
-  it('deposit date is recorded', function() {
+  it('date of deposit is recorded', function() {
     account.deposit(1000.00);
     expect(account.viewStatement()).toContain(date);
   });
 
-  it('withdrawal date is recorded', function() {
-    account.withdraw(1000.00);
+  it('date of withdrawal is recorded', function() {
+    account.withdraw(500.00);
     expect(account.viewStatement()).toContain(date);
   });
 
-  it('can print a bank statement', function() {
+  it('client can print her bank statement', function() {
     expect(account.viewStatement()).toContain(headers);
   });
 
-  it('should print a transaction amount and date', function(){
+  it('bank statement prints transaction amount and date', function() {
     account.deposit(1000.00);
     expect(account.viewStatement()).toContain(amount);
   });

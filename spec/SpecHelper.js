@@ -23,8 +23,8 @@ beforeEach(function() {
   debit = new Transaction(500.00, tomorrow);
 
   transactions = [
-    new Transaction(1000.00, today),
-    new Transaction(2000.00, tomorrow)
+    new Transaction(1000.00, 1000.00, today),
+    new Transaction(2000.00, 3000.00, tomorrow)
   ];
 
   transactionHistory = new TransactionHistory(transactions);

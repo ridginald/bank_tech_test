@@ -2,24 +2,37 @@
 
 describe('Deposit', function() {
 
+  var transaction;
+
+  beforeEach(function() {
+    transaction = new Transaction(1000.00, 1000.00, today);
+  });
+
   it('should be a defined object', function() {
-    expect(credit instanceof(Transaction)).toBe(true);
+    expect(transaction instanceof(Transaction)).toBe(true);
   });
 
-  it('should be able to deposit any credit amount', function() {
-    expect(credit.amount).toBe(amount);
+  it('should have an amount property', function() {
+    expect(transaction.amount).toBeDefined();
   });
 
-  it('should have a credit date', function() {
-    expect(credit.date).toBe(today);
+  it('should have the correct amount property', function() {
+    expect(transaction.amount).toBe(1000.00);
   });
 
-  it('should be able to withdraw correct amount(500.00)', function() {
-    expect(debit.amount).toBe(500.00);
+  it('should have a date property', function() {
+    expect(transaction.date).toBeDefined();
   });
 
-  it('should have a withdrawal date', function() {
-    expect(debit.date).toBe(tomorrow);
+  it('should have the correct date property', function() {
+    expect(transaction.date).toBe(today);
   });
-  
+
+  it('should have a current_balance property', function() {
+    expect(transaction.current_balance).toBeDefined();
+  });
+
+  it('should have the correct current_balance property', function() {
+    expect(transaction.current_balance).toBe(1000.00);
+  });
 });
